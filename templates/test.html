@@ -4,9 +4,24 @@
     <title></title>
 </head>
 <body>
-         <h4>what is your name:{{nme}}</h4>
-         <form method='post'>
-         <input type = "text">
+         <h4>what is your name:</h4>
+         <form action="/graphs" method="post" >
+             <label>Food:</label>
+         <input type="text" name="food" id="food">
+
+    <br>
+             <label>calories:</label>
+        <input type="text" name="calories" id="calories">
+    <br>
+    
+         <input type="submit">
          </form>
+         <p><a href="http://0.0.0.0:5000/graphs">hello</a></p>
+         <li>
+             <ol>{{food}}</ol>
+         </li>
+
+       
+    
 </body>
 </html>
