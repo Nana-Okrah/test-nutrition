@@ -17,9 +17,38 @@
          <input type="submit">
          </form>
          <p><a href="http://0.0.0.0:5000/graphs">hello</a></p>
-         <li>
-             <ol>{{food}}</ol>
-         </li>
+         
+
+         
+         
+
+
+
+
+
+         <script>
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+ 
+            var x_axis={{fd}};
+            var y_axis={{cal}};
+ 
+            var myChart = new Chart("myChart", {
+   type: "bar",
+   data: {
+     labels: xValues,
+     datasets: [{
+       backgroundColor: "rgba(0,0,0,1.0)",
+       borderColor: "rgba(0,0,0,0.1)",
+       data: yValues
+   },
+   options: {}
+ });
+    </script>
+ 
+      <h1>{{fd}}</h1>
+      <h1>{{cal}}</h1>
+       
+     
 
        
     

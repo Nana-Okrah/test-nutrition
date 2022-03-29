@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+           src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+
+           var x_axis={{fd}} | safe;
+           var y_axis={{cal}} | safe;
+
+           var myChart = new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: x_axis,
+    datasets: [{
+      backgroundColor: "rgba(0,0,0,1.0)",
+      borderColor: "rgba(0,0,0,0.1)",
+      data: y_axis
+  },
+  options: {}
+});
+   </script>
+
+     <h1>{{fd}}</h1>
+     <h1>{{cal}}</h1>
+      
+    
+</body>
+</html>

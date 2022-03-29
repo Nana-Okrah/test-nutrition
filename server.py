@@ -1,11 +1,14 @@
+from re import template
 from flask import Flask, render_template, request,  current_app as app
 from flask_cors import CORS
-#import matplotlib.pyplot as plt
-# import numpy as np
 import requests
 import sqlite3
 import sys
 import os
+
+
+
+
 
 
 app = Flask(__name__)
@@ -28,8 +31,23 @@ def send_name():
     curs = conn.cursor()
     curs.execute("INSERT INTO foodCalories(food, calories) VALUES((?),(?))",(food, calories))#places user info from site to DB
     conn.commit()
+    for row in curs.execute('SELECT * FROM foodCalories'):
+        r=({'food':row[1],'calories':row[2]})
+        r.append(r)
+       
+        
     
-    return render_template('test.html',food=food, calories=calories)
+        
+
+    
+    return render_template('test.html', r=r,food=food, calories=calories)
+
+@app.route("/display")
+def display():
+
+    return render_template('test.html')
+    
+    
 
     
 if __name__ == '__main__':
